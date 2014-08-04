@@ -4,7 +4,7 @@ import java.util.concurrent.TimeUnit;
 
 public class Main {
 
-	public static final int THREAD_COUNT = 20000;
+	private static final int THREAD_COUNT = 10000;
 
 	public static void main(String[] args) {
 		Main main = new Main();
@@ -25,7 +25,7 @@ public class Main {
 			waitASecond();
 			justForSureCounter--;
 			int liveCount = counter.getCount();
-			System.out.println("----------------- Waiting for threads to finish (count = " + liveCount + ") -----------------");
+			System.out.println("------------- Waiting for threads to finish (count = " + liveCount + ") -------------");
 		}
 		// print the final value of counter - if > 0 then race condition occured
 		System.out.println("================== Main finished (count = " + counter.getCount() + ") ==================");

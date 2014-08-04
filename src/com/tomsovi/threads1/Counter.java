@@ -1,13 +1,13 @@
 package com.tomsovi.threads1;
 
 public class Counter {
-	int count;
+	private int count;
 
 	public Counter(int count) {
 		this.count = count;
 	}
 
-	public void decrement() {
+	public synchronized void decrement() {
 		count--;
 	}
 
